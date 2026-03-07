@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Zomato Demo</title>
+<style>
+body{
+ font-family: Arial;
+ background:#fafafa;
+}
+.header{
+ background:#e23744;
+ color:white;
+ padding:20px;
+ text-align:center;
+ font-size:28px;
+}
+.container{
+ width:70%;
+ margin:auto;
+ margin-top:30px;
+}
+.card{
+ background:white;
+ padding:20px;
+ margin:15px;
+ border-radius:8px;
+ box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+button{
+ background:#e23744;
+ color:white;
+ border:none;
+ padding:10px 15px;
+ border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+ Zomato Restaurant Food Page
+</div>
+
+<div class="container">
+
+<div class="card" th:each="r : ${restaurants}">
+<h2 th:text="${r}"></h2>
+<p>Popular food available here</p>
+<button>Order Now</button>
+</div>
+
+</div>
+
+</body>
+</html>
