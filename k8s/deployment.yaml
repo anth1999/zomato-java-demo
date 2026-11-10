@@ -20,5 +20,5 @@ spec:
         - name: myapp-container
           image: IMAGE_PLACEHOLDER
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           imagePullPolicy: Always
